@@ -1,0 +1,61 @@
+{
+  "name": "digichart",
+  "version": "0.2.0",
+  "url": "https://digidex.finance/",
+  "description": "Multi-Chain && Multi-Protocol wallet tracker",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pm2 restart ecosystem.config.cjs --env production",
+    "dev": "pm2 start ecosystem.config.cjs --env development && pm2 save",
+    "stop": "pm2 stop all && pm2 delete all",
+    "deploy-production": "pm2 deploy ecosystem.config.cjs production",
+    "upgrade-interactive": "rm package-lock.json || true && yarn && yarn upgrade-interactive --latest"
+  },
+  "keywords": [
+    "arbitrum",
+    "avalanche",
+    "bsc",
+    "blockchain",
+    "celo",
+    "cronos",
+    "currency",
+    "crypto",
+    "dex",
+    "ethereum",
+    "fantom",
+    "honeyswap",
+    "nft",
+    "opera",
+    "pancakeswap",
+    "polygon",
+    "spiritswap",
+    "quickswap",
+    "token",
+    "uniswap",
+    "wallet",
+    "web3js",
+    "xdai"
+  ],
+  "author": "Tommy Chain Dev",
+  "funding": [
+    {
+      "url": "https://digidex.finance/donate"
+    },
+  ],
+  "license": "GNU General Public License v3.0",
+  "dependencies": {
+    "compression": "*",
+    "express": "*",
+    "express-rate-limit": "*",
+    "node-fetch": "*",
+    "pm2": "*",
+    "yarn": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "stylelint": "*",
+    "stylelint-config-standard": "*",
+    "stylelint-order": "*"
+  }
+}
